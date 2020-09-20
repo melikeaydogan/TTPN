@@ -48,7 +48,9 @@ chmod +x qt-opensource-linux-x64-5.14.2.run
 
 Open CMake GUI and search for qt and choose all of the options and configure.
 
-![alt text](https://user-images.githubusercontent.com/70952816/93706385-72b8c300-fb2e-11ea-8b84-39fab4dcccc1.png)
+![alt text](https://user-images.githubusercontent.com/70952816/93706800-a5fd5100-fb32-11ea-9298-f43a8b81aff0.png)
+
+![alt text](https://user-images.githubusercontent.com/70952816/93706787-8d8d3680-fb32-11ea-8f6f-e36369c919f5.png)
 
 Qt5Core_DIR
 Qt5Gui_DIR
