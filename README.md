@@ -3,6 +3,10 @@
 Install CMake version 3.13.4
 https://cmake.org/install/
 
+![alt text](link)
+
+
+
 Download QtCreator 5.14.2
 https://www.qt.io/download
 
