@@ -40,10 +40,15 @@ Then with the cmake-gui VTK will be build. To make it, choose the source directo
 ## Download QtCreator 5.14.2
 Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
+chmod +x qt-opensource-linux-x64-5.14.2.run
+
+./qt-opensource-linux-x64-5.14.2.run
 
 ## Link VTK with Qt
 
-Open CMake GUI and search for qt
+Open CMake GUI and search for qt and choose all of the options and configure.
+
+![alt text](https://user-images.githubusercontent.com/70952816/93706385-72b8c300-fb2e-11ea-8b84-39fab4dcccc1.png)
 
 Qt5Core_DIR
 Qt5Gui_DIR
