@@ -1,6 +1,20 @@
 # TTPN
 
 Install CMake version 3.13.4
+
+Download the source file of the CMake https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
+or the command lines are
+
+wget https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
+mkdir software
+cd software
+tar xvfz ../cmake-3.13.4-Linux-x86_64.tar.gz
+
+In the software/cmake-3.13.4-Linux-x86_64/bin there are executables
+
+![alt text](link)
+
+
 https://cmake.org/install/
 
 ![alt text](link)
