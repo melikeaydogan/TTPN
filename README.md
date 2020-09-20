@@ -33,7 +33,7 @@ tar xvfz ../VTK-8.2.0.tar.gz
 mkdir VTK-build
 
 
-Then with the cmake-gui VTK will be build
+Then with the cmake-gui VTK will be build. To make it, choose the source directory and build directory and choose the necessary libraries and configure them then generate it.
 ![alt text](https://user-images.githubusercontent.com/70952816/93706385-72b8c300-fb2e-11ea-8b84-39fab4dcccc1.png)
 
 # Download QtCreator 5.14.2
