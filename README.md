@@ -1,31 +1,45 @@
-# TTPN
+## TTPN
 
-Install CMake version 3.13.4
+# Install CMake version 3.13.4 
 
 Download the source file of the CMake https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
 or the command lines are
 
 wget https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
+
 mkdir software
+
 cd software
+
 tar xvfz ../cmake-3.13.4-Linux-x86_64.tar.gz
 
-In the software/cmake-3.13.4-Linux-x86_64/bin there are executables
 
-![alt text](link)
+In the directory software/cmake-3.13.4-Linux-x86_64/bin there are executables
+
+![alt text](https://user-images.githubusercontent.com/70952816/93706122-e1485180-fb2b-11ea-84e0-77725ab70ad8.png)
+
+The installation of cmake is done
+
+# Install VTK 8.2.0
+
+After downloading the soruce file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
+
+mkdir projects
+
+cd projects
+
+tar xvfz ../VTK-8.2.0.tar.gz
+
+mkdir VTK-build
 
 
-https://cmake.org/install/
+Then with the cmake-gui VTK will be build
+![alt text]( )
 
-![alt text](link)
-
-
-
-Download QtCreator 5.14.2
+# Download QtCreator 5.14.2
 https://www.qt.io/download
 
-Install VTK 8.2.0
-https://vtk.org/Wiki/VTK/Configure_and_Build
+
 
 then link VTK with Qt
 
