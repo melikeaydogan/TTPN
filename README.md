@@ -1,4 +1,5 @@
 # TTPN
+Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 
 ## Install CMake version 3.13.4 
 
@@ -23,6 +24,16 @@ In the directory software/cmake-3.13.4-Linux-x86_64/bin there are executables
 ![alt text](https://user-images.githubusercontent.com/70952816/93706122-e1485180-fb2b-11ea-84e0-77725ab70ad8.png)
 
 The installation of cmake is done
+
+For more information https://cmake.org/install/
+
+## Install hdf5
+
+sudo apt-get install libhdf5-serial-dev
+
+## Install netcdf library
+
+https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.html
 
 ## Install VTK 8.2.0
 
