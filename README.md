@@ -5,6 +5,10 @@
 Download the source file of the CMake https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
 or the command lines are
 
+sudo apt install cmake
+
+or
+
 wget https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
 
 mkdir software
