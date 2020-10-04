@@ -1,31 +1,23 @@
-# TTPN
+# TTPN User Manuel
+
+## TTPN
 Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 
-## Install CMake version 3.13.4 
+## Installation Manuel
 
-Download the source file of the CMake https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
-or the command lines are
+### Install CMake version 3.13.4 
 
-sudo apt install cmake
+wget http://www.cmake.org/files/v3.13/cmake-3.13.4.tar.gz
 
-or
+tar xzf cmake-3.13.4.tar.gz
 
-wget https://cmake.org/files/v3.13/cmake-3.13.4-Linux-x86_64.tar.gz
+cd cmake-3.13.4
 
-mkdir software
+./configure --prefix=/home/aydogan/cmake
 
-cd software
+make
 
-tar xvfz ../cmake-3.13.4-Linux-x86_64.tar.gz
-
-
-In the directory software/cmake-3.13.4-Linux-x86_64/bin there are executables
-
-![alt text](https://user-images.githubusercontent.com/70952816/93706122-e1485180-fb2b-11ea-84e0-77725ab70ad8.png)
-
-The installation of cmake is done
-
-For more information https://cmake.org/install/
+make install
 
 ## Install hdf5
 
@@ -37,7 +29,7 @@ https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.ht
 
 ## Install VTK 8.2.0
 
-After downloading the soruce file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
+After downloading the source file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
 
 mkdir projects
 
