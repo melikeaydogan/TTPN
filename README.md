@@ -8,15 +8,10 @@ Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 ### Install CMake version 3.13.4 
 
 > wget http://www.cmake.org/files/v3.13/cmake-3.13.4.tar.gz
-
 > tar xzf cmake-3.13.4.tar.gz
-
 > cd cmake-3.13.4
-
 > ./configure --prefix=/home/aydogan/cmake
-
 > make
-
 > make install
 
 ### Install hdf5
