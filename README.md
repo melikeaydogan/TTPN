@@ -8,10 +8,15 @@ Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 ### Install CMake version 3.13.4 
 
 > wget http://www.cmake.org/files/v3.13/cmake-3.13.4.tar.gz
+
 > tar xzf cmake-3.13.4.tar.gz
+
 > cd cmake-3.13.4
+
 > ./configure --prefix=/home/aydogan/cmake
+
 > make
+
 > make install
 
 ### Install hdf5
@@ -22,51 +27,51 @@ sudo apt-get install libhdf5-serial-dev
 
 https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.html
 
-git clone http://github.com/Unidata/netcdf-c netcdf-c
+> git clone http://github.com/Unidata/netcdf-c netcdf-c
 
-mkdir netcdf-build
+> mkdir netcdf-build
 
-cd netcdf-build
+> cd netcdf-build
 
-cmake ../netcdf-c
+> cmake ../netcdf-c
 
 ### Download QtCreator 5.14.2
 Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
-chmod +x qt-opensource-linux-x64-5.14.2.run
+> chmod +x qt-opensource-linux-x64-5.14.2.run
 
-./qt-opensource-linux-x64-5.14.2.run
+> ./qt-opensource-linux-x64-5.14.2.run
 
 ### Install VTK 8.2.0
 
 After downloading the source file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
 
-mkdir projects
+> mkdir projects
 
-cd projects
+> cd projects
 
-wget https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
+> wget https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
 
-tar xvfz VTK-8.2.0.tar.gz
+> tar xvfz VTK-8.2.0.tar.gz
 
-mkdir VTK-build
+> mkdir VTK-build
 
-cd VTK-build
+> cd VTK-build
 
-ccmake ../VTK-8.2.0
+> ccmake ../VTK-8.2.0
 
 With last command line cmake window will open.
 
-
+![alt text]()
 
 #### Link VTK with Qt
 
 Open CMake GUI and search for qt and choose all of the options and configure.
 
 
-![alt text](https://user-images.githubusercontent.com/70952816/93706787-8d8d3680-fb32-11ea-8f6f-e36369c919f5.png)
+![alt text]()
 
-![alt text](https://user-images.githubusercontent.com/70952816/93706800-a5fd5100-fb32-11ea-9298-f43a8b81aff0.png)
+![alt text]()
 
 
 Qt5Core_DIR
