@@ -27,6 +27,17 @@ sudo apt-get install libhdf5-serial-dev
 
 https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.html
 
+git clone http://github.com/Unidata/netcdf-c netcdf-c
+
+mkdir netcdf-build
+
+cd netcdf-build
+
+cmake ../netcdf-c
+
+
+
+
 ### Install VTK 8.2.0
 
 After downloading the source file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
