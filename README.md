@@ -7,17 +7,17 @@ Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 
 ### Install CMake version 3.13.4 
 
-wget http://www.cmake.org/files/v3.13/cmake-3.13.4.tar.gz
+> wget http://www.cmake.org/files/v3.13/cmake-3.13.4.tar.gz
 
-tar xzf cmake-3.13.4.tar.gz
+> tar xzf cmake-3.13.4.tar.gz
 
-cd cmake-3.13.4
+> cd cmake-3.13.4
 
-./configure --prefix=/home/aydogan/cmake
+> ./configure --prefix=/home/aydogan/cmake
 
-make
+> make
 
-make install
+> make install
 
 ### Install hdf5
 
@@ -35,8 +35,12 @@ cd netcdf-build
 
 cmake ../netcdf-c
 
+### Download QtCreator 5.14.2
+Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
+chmod +x qt-opensource-linux-x64-5.14.2.run
 
+./qt-opensource-linux-x64-5.14.2.run
 
 ### Install VTK 8.2.0
 
@@ -56,17 +60,9 @@ cd VTK-build
 
 ccmake ../VTK-8.2.0
 
+With last command line cmake window will open.
 
-Then with the cmake-gui VTK will be build. To make it, choose the source directory and build directory and choose the necessary libraries and configure them then generate it.
 
-![alt text](https://user-images.githubusercontent.com/70952816/93706385-72b8c300-fb2e-11ea-8b84-39fab4dcccc1.png)
-
-### Download QtCreator 5.14.2
-Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
-
-chmod +x qt-opensource-linux-x64-5.14.2.run
-
-./qt-opensource-linux-x64-5.14.2.run
 
 #### Link VTK with Qt
 
