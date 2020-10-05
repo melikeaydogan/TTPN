@@ -19,15 +19,15 @@ make
 
 make install
 
-## Install hdf5
+### Install hdf5
 
 sudo apt-get install libhdf5-serial-dev
 
-## Install netcdf library
+### Install netcdf library
 
 https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.html
 
-## Install VTK 8.2.0
+### Install VTK 8.2.0
 
 After downloading the source file of the VTK from the link https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
 
@@ -35,23 +35,29 @@ mkdir projects
 
 cd projects
 
-tar xvfz ../VTK-8.2.0.tar.gz
+wget https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz
+
+tar xvfz VTK-8.2.0.tar.gz
 
 mkdir VTK-build
+
+cd VTK-build
+
+ccmake ../VTK-8.2.0
 
 
 Then with the cmake-gui VTK will be build. To make it, choose the source directory and build directory and choose the necessary libraries and configure them then generate it.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/93706385-72b8c300-fb2e-11ea-8b84-39fab4dcccc1.png)
 
-## Download QtCreator 5.14.2
+### Download QtCreator 5.14.2
 Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
 chmod +x qt-opensource-linux-x64-5.14.2.run
 
 ./qt-opensource-linux-x64-5.14.2.run
 
-## Link VTK with Qt
+#### Link VTK with Qt
 
 Open CMake GUI and search for qt and choose all of the options and configure.
 
