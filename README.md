@@ -74,10 +74,6 @@ Open CMake GUI and search for qt and choose all of the options and configure.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137237-53e23f80-0770-11eb-8f26-20bb8f935fb3.png)
 
-![alt text](https://user-images.githubusercontent.com/70952816/95137236-5349a900-0770-11eb-8ad9-d0a4904d77b2.png)
-
-![alt text](https://user-images.githubusercontent.com/70952816/95137234-5349a900-0770-11eb-9a20-06dfa71e3ae7.png)
-
 ![alt text](https://user-images.githubusercontent.com/70952816/95137233-52b11280-0770-11eb-94e4-56dd824dd1ff.png)
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137232-52187c00-0770-11eb-8a48-7e58c042dfd6.png)
