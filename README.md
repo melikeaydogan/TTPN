@@ -21,7 +21,7 @@ Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 
 ### Install hdf5
 
-sudo apt-get install libhdf5-serial-dev
+> sudo apt-get install libhdf5-serial-dev
 
 ### Install netcdf library
 
@@ -66,11 +66,12 @@ With last command line cmake window will open.
 
 #### Link VTK with Qt
 
-Open CMake GUI and search for qt and choose all of the options and configure.
 
-![alt text](https://user-images.githubusercontent.com/70952816/95137240-547ad600-0770-11eb-9bc9-0e4c5e403ea8.png)
+Press c to configure then make VTKGroup_Qt ON and configure it again.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137239-53e23f80-0770-11eb-9937-07bffacbb806.png)
+
+You will get error and it wil be solved once you change the direction of the Qt and after that configure it.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137237-53e23f80-0770-11eb-8f26-20bb8f935fb3.png)
 
@@ -80,11 +81,6 @@ Open CMake GUI and search for qt and choose all of the options and configure.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137229-517fe580-0770-11eb-9228-e37b5888247a.png)
 
-Qt5Core_DIR
-Qt5Gui_DIR
-Qt5PrintSupport_DIR
-Qt5Sql_DIR
-Qt5Widgets_DIR
 VTK_DIR
 
 tv14 CMakeLists.txt
