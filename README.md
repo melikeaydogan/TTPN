@@ -71,17 +71,25 @@ Press c to configure then make VTKGroup_Qt ON and configure it again.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137239-53e23f80-0770-11eb-9937-07bffacbb806.png)
 
-You will get error and it wil be solved once you change the direction of the Qt and after that configure it.
+You will get error and it wil be solved once you change the direction of the Qt, Qt5_DIR, and after this change configure it.
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137237-53e23f80-0770-11eb-8f26-20bb8f935fb3.png)
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137233-52b11280-0770-11eb-94e4-56dd824dd1ff.png)
 
+Directions of other Qt are be filled automatically and another configuration is needed.
+
 ![alt text](https://user-images.githubusercontent.com/70952816/95137232-52187c00-0770-11eb-8a48-7e58c042dfd6.png)
 
 ![alt text](https://user-images.githubusercontent.com/70952816/95137229-517fe580-0770-11eb-9228-e37b5888247a.png)
 
+After generating the build with g, then VTK is ready.
+
+## Changes needed in the files before opening it with QtCreator
+
 VTK_DIR
+
+## How to open TTPN code with QtCreator
 
 tv14 CMakeLists.txt
 -change VTK_DIR
