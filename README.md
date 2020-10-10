@@ -48,7 +48,7 @@ Download hdf5-1.12.0.tar.gz from https://www.hdfgroup.org/downloads/hdf5/source-
 > make install
 
 
-### Install netcdf library
+### Install netcdf-c library
 
 > git clone http://github.com/Unidata/netcdf-c netcdf-c
 
