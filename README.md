@@ -50,8 +50,6 @@ Download hdf5-1.12.0.tar.gz from https://www.hdfgroup.org/downloads/hdf5/source-
 
 ### Install netcdf library
 
-https://www.unidata.ucar.edu/software/netcdf/docs/getting_and_building_netcdf.html
-
 > git clone http://github.com/Unidata/netcdf-c netcdf-c
 
 > mkdir netcdf-build
