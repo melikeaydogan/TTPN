@@ -19,9 +19,34 @@ Token Tracking Petri Net (TTPN) is a GUI to visualize activity detection.
 
 > make install
 
+### Install zlib
+
+> wget http://www.zlib.net/zlib-1.2.11.tar.gz
+
+> tar -xvzf zlib-1.2.11.tar.gz
+
+> cd zlib-1.2.11
+
+> ./configure --prefix=/usr/local/zlib
+
+> sudo make install
+
+### Install curl
+
+> sudo apt install curl
+
 ### Install hdf5
 
-> sudo apt-get install libhdf5-serial-dev
+Download hdf5-1.12.0.tar.gz from https://www.hdfgroup.org/downloads/hdf5/source-code/
+
+> tar -xvf hdf5-1.12.0.tar.gz
+
+> cd hdf5-1.12.0
+
+> ./configure --prefix=$fld_install --with-zlib=$fld_install
+
+> make install
+
 
 ### Install netcdf library
 
