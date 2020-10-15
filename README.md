@@ -108,11 +108,12 @@ Directions of other Qt are be filled automatically and another configuration is 
 
 After generating the build with g, then VTK is ready.
 
-## Changes needed in the files before opening it with QtCreator
+## Download tv14 and make changes on the code
 
-VTK_DIR
+1. In the mainwindow.cpp, to get images on the TTPN, change the places with "waytottpncode" with your direction to the file of TTPN code.
+
+2. In the CMakeLists.txt, change the VTK_DIR in line 6.
 
 ## How to open TTPN code with QtCreator
 
-tv14 CMakeLists.txt
--change VTK_DIR
+
