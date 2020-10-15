@@ -116,4 +116,8 @@ After generating the build with g, then VTK is ready.
 
 ## How to open TTPN code with QtCreator
 
+1. Choose Open & choose the CMakeLists.txt
+
+2. Run the code then the TTPN window will appear.
+
 
