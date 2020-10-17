@@ -58,7 +58,7 @@ Download hdf5-1.12.0.tar.gz from https://www.hdfgroup.org/downloads/hdf5/source-
 
 > cmake ../netcdf-c
 
-### Download QtCreator 5.14.2
+### Install QtCreator 5.14.2
 Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
 > chmod +x qt-opensource-linux-x64-5.14.2.run
