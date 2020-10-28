@@ -122,7 +122,7 @@ After generating the build with g, then VTK is ready.
 
 2. In the mainFeatureTrack.cpp, change the paths in line 234 and 947.
 
-3.In the CMakeLists.txt, change the VTK_DIR in line 6, CMAKE_LIBRARY_PATH in line 25 and CMAKE_INCLUDE_PATH in line 26.
+3. In the CMakeLists.txt, change the VTK_DIR in line 6, CMAKE_LIBRARY_PATH in line 25 and CMAKE_INCLUDE_PATH in line 26.
 
 ## How to open TTPN code with QtCreator
 
