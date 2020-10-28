@@ -58,7 +58,7 @@ Download hdf5-1.12.0.tar.gz from https://www.hdfgroup.org/downloads/hdf5/source-
 
 > cmake ../netcdf-c
 
-### Install QtCreator 5.14.2
+### Download and Install QtCreator 5.14.2
 Download the release from https://download.qt.io/official_releases/qt/5.14/5.14.2/
 
 > chmod +x qt-opensource-linux-x64-5.14.2.run
@@ -109,6 +109,8 @@ Directions of other Qt are be filled automatically and another configuration is 
 After generating the build with g, then VTK is ready.
 
 ## Download tv14 and make changes on the code
+
+[tv14](#https://github.com/melikeaydogan/TTPN/tree/master/tv14)
 
 1. In the mainwindow.cpp, to get images on the TTPN, change the places with "waytottpncode" with your direction to the file of TTPN code.
 
