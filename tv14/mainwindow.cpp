@@ -36,6 +36,8 @@
 #include "unistd.h"
 //#include <windows.h>   //Especially for Sleep() function in Windows. Pleasee use commented sleep() in Linux
 
+#define PATH_TO_TV14_FILE /home/aydogan/Desktop
+
 using namespace std;
 
 MainWindow::MainWindow()
@@ -1408,7 +1410,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
  {
      textAction = qobject_cast<QAction *>(sender());
      fontColorToolButton->setIcon(createColorToolButtonIcon(
-                 "/waytottpncode/tv14/images/textpointer.png",
+                 "PATH_TO_TV14_FILE/tv14/images/textpointer.png",
                  qvariant_cast<QColor>(textAction->data())));
      textButtonTriggered();
  }
@@ -1418,7 +1420,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
  {
      fillAction = qobject_cast<QAction *>(sender());
      fillColorToolButton->setIcon(createColorToolButtonIcon(
-                  "/waytottpncode/tv14/images/floodfill.png",
+                  "PATH_TO_TV14_FILE/tv14/images/floodfill.png",
                   qvariant_cast<QColor>(fillAction->data())));
      fillButtonTriggered();
  }
@@ -1428,7 +1430,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
  {
      lineAction = qobject_cast<QAction *>(sender());
      lineColorToolButton->setIcon(createColorToolButtonIcon(
-                  "/waytottpncode/tv14/images/linecolor.png",
+                  "PATH_TO_TV14_FILE/tv14/images/linecolor.png",
                   qvariant_cast<QColor>(lineAction->data())));
      lineButtonTriggered();
  }
@@ -1666,7 +1668,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
 
       browse1Button = new QToolButton;
       browse1Button->setCheckable(true);
-      browse1Button->setIcon(QIcon(QPixmap("/waytottpncode/tv14/images/browse.png")
+      browse1Button->setIcon(QIcon(QPixmap("PATH_TO_TV14_FILE/tv14/images/browse.png")
                           .scaled(200, 100)));
       browse1Button->setIconSize(QSize(20, 10));
       connect( browse1Button, SIGNAL(clicked()), this, SLOT(browseTrackingFile()) );
@@ -1674,7 +1676,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
 
       browse2Button = new QToolButton;
       browse2Button->setCheckable(true);
-      browse2Button->setIcon(QIcon(QPixmap("/waytottpncode/tv14/images/browse.png")
+      browse2Button->setIcon(QIcon(QPixmap("PATH_TO_TV14_FILE/tv14/images/browse.png")
                           .scaled(200, 100)));
       browse2Button->setIconSize(QSize(20, 10));
       connect( browse2Button, SIGNAL(clicked()), this, SLOT(browseFirstDataFile()) );
@@ -1682,7 +1684,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
 
       browse3Button = new QToolButton;
       browse3Button->setCheckable(true);
-      browse3Button->setIcon(QIcon(QPixmap("/waytottpncode/tv14/images/browse.png")
+      browse3Button->setIcon(QIcon(QPixmap("PATH_TO_TV14_FILE/tv14/images/browse.png")
                           .scaled(200, 100)));
       browse3Button->setIconSize(QSize(20, 10));
       connect( browse3Button, SIGNAL(clicked()), this, SLOT(browseLastDataFile()) );
@@ -1730,21 +1732,21 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
 
  void MainWindow::createActions()
  {
-     toFrontAction = new QAction(QIcon("/waytottpncode/tv14/images/bringtofront.png"),
+     toFrontAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/bringtofront.png"),
                                  tr("Bring to &Front"), this);
      toFrontAction->setShortcut(tr("Ctrl+F"));
      toFrontAction->setStatusTip(tr("Bring item to front"));
      connect(toFrontAction, SIGNAL(triggered()),
              this, SLOT(bringToFront()));
 
-     sendBackAction = new QAction(QIcon("/waytottpncode/tv14/images/sendtoback.png"),
+     sendBackAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/sendtoback.png"),
                                   tr("Send to &Back"), this);
      sendBackAction->setShortcut(tr("Ctrl+B"));
      sendBackAction->setStatusTip(tr("Send item to back"));
      connect(sendBackAction, SIGNAL(triggered()),
          this, SLOT(sendToBack()));
 
-     deleteAction = new QAction(QIcon("/waytottpncode/tv14/images/delete.png"),
+     deleteAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/delete.png"),
                                 tr("&Delete"), this);
      deleteAction->setShortcut(tr("Delete"));
      deleteAction->setStatusTip(tr("Delete item from diagram"));
@@ -1753,20 +1755,20 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
 
      boldAction = new QAction(tr("Bold"), this);
      boldAction->setCheckable(true);
-     QPixmap pixmap("/waytottpncode/tv14/images/bold.png");
+     QPixmap pixmap("PATH_TO_TV14_FILE/tv14/images/bold.png");
      boldAction->setIcon(QIcon(pixmap));
      boldAction->setShortcut(tr("Ctrl+B"));
      connect(boldAction, SIGNAL(triggered()),
              this, SLOT(handleFontChange()));
 
-     italicAction = new QAction(QIcon("/waytottpncode/tv14/images/italic.png"),
+     italicAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/italic.png"),
                                 tr("Italic"), this);
      italicAction->setCheckable(true);
      italicAction->setShortcut(tr("Ctrl+I"));
      connect(italicAction, SIGNAL(triggered()),
              this, SLOT(handleFontChange()));
 
-     underlineAction = new QAction(QIcon("/waytottpncode/tv14/images/underline.png"),
+     underlineAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/underline.png"),
                                    tr("Underline"), this);
      underlineAction->setCheckable(true);
      underlineAction->setShortcut(tr("Ctrl+U"));
@@ -1782,94 +1784,94 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
      connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 
 
-     openConfAction = new QAction(QIcon("/waytottpncode/tv14/images/openText.png"), tr("&Open &Conf"), this);
+     openConfAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/openText.png"), tr("&Open &Conf"), this);
      openConfAction->setShortcut(tr("Ctrl+C"));
      openConfAction->setStatusTip(tr("Open Saved *.Conf file"));
      connect(openConfAction, SIGNAL(triggered()), this, SLOT(openConfAction_triggered()));
 
      /*
-     openTextAction = new QAction(QIcon("/waytottpncode/tv14/images/openText.png"), tr("&Open &Text"), this);
+     openTextAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/openText.png"), tr("&Open &Text"), this);
      openTextAction->setShortcut(tr("Ctrl+O"));
      openTextAction->setStatusTip(tr("Open Saved *.txt file"));
      connect(openTextAction, SIGNAL(triggered()), this, SLOT(openTextAction_triggered()));
      */
 
-     saveAction = new QAction(QIcon("/waytottpncode/tv14/images/save.png"), tr("&Save"), this);
+     saveAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/save.png"), tr("&Save"), this);
      saveAction->setShortcut(tr("Ctrl+S"));
      saveAction->setStatusTip(tr("Save *.txt file to current path"));
      connect(saveAction, SIGNAL(triggered()), this, SLOT(saveAction_triggered()));
 
-     saveasAction = new QAction(QIcon("/waytottpncode/tv14/images/save.png"), tr("&Save &As"), this);
+     saveasAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/save.png"), tr("&Save &As"), this);
      saveasAction->setShortcut(tr("Ctrl+A"));
      saveasAction->setStatusTip(tr("Save *.txt file to chosen path"));
      connect(saveasAction, SIGNAL(triggered()), this, SLOT(saveasAction_triggered()));
 
-     printAction = new QAction(QIcon("/waytottpncode/tv14/images/printer.png"), tr("&Print"), this);
+     printAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/printer.png"), tr("&Print"), this);
      printAction->setShortcut(tr("Ctrl+P"));
      printAction->setStatusTip(tr("Print"));
      connect(printAction, SIGNAL(triggered()), this, SLOT(printAction_triggered()));
 
-     exitAction = new QAction(QIcon("/waytottpncode/tv14/images/exit.png"), tr("&Exit"), this);
+     exitAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/exit.png"), tr("&Exit"), this);
      exitAction->setShortcuts(QKeySequence::Quit);
      exitAction->setStatusTip(tr("Quit PNS"));
      connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
 
-     grabAction = new QAction(QIcon("/waytottpncode/tv14/images/camera.png"), tr("Snapshot"), this);
+     grabAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/camera.png"), tr("Snapshot"), this);
      grabAction->setShortcut(tr("Ctrl+G"));
      grabAction->setStatusTip(tr("Take a snapshot of current view"));
      connect(grabAction, SIGNAL(triggered()), this, SLOT(grabAction_triggered()));
 
-     clearAction = new QAction(QIcon("/waytottpncode/tv14/images/clear.png"), tr("Clear"), this);
+     clearAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/clear.png"), tr("Clear"), this);
      clearAction->setShortcut(tr("Ctrl+L"));
      clearAction->setStatusTip(tr("Clear current view"));
      connect(clearAction, SIGNAL(triggered()), this, SLOT(clearAction_triggered()));
 
-     undoAction = new QAction(QIcon("/waytottpncode/tv14/images/undo.png"), tr("&Undo"), this);
+     undoAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/undo.png"), tr("&Undo"), this);
      undoAction->setShortcut(tr("Ctrl+U"));
      undoAction->setStatusTip(tr("undo last operation"));
 
-     redoAction = new QAction(QIcon("/waytottpncode/tv14/images/redo.png"), tr("&Redo"), this);
+     redoAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/redo.png"), tr("&Redo"), this);
      redoAction->setShortcut(tr("Ctrl+R"));
      redoAction->setStatusTip(tr("redo last operation"));
 
 
-     pointerAction = new QAction(QIcon("/waytottpncode/tv14/images/pointer2.png"), tr("&Move Item"), this);
+     pointerAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/pointer2.png"), tr("&Move Item"), this);
      pointerAction->setStatusTip(tr("Move Item by mouse"));
      connect( pointerAction, SIGNAL(triggered()),this, SLOT(pointerbuttonClicked()) );
 
-     clickAction = new QAction(QIcon("/waytottpncode/tv14/images/click2.png"), tr("Click P/T"), this);
+     clickAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/click2.png"), tr("Click P/T"), this);
      clickAction->setStatusTip(tr("Display information of the clicked place or transition"));
      connect( clickAction, SIGNAL(triggered()), this, SLOT(checkItem()) );
 
-     clickArcAction = new QAction(QIcon("/waytottpncode/tv14/images/click.png"), tr("Click Arc"), this);
+     clickArcAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/click.png"), tr("Click Arc"), this);
      clickArcAction->setStatusTip(tr("Display information of the clicked arc"));
      connect( clickArcAction, SIGNAL(triggered()), this, SLOT(checkArc()) );
 
-     multiselectAction = new QAction(QIcon("/waytottpncode/tv14/images/multiselect.png"), tr("Multiple Selection"), this);
+     multiselectAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/multiselect.png"), tr("Multiple Selection"), this);
      multiselectAction->setStatusTip(tr("Select multiple items in the scene by mouse dragging"));
      connect( multiselectAction, SIGNAL(triggered()), this, SLOT(multiselectbuttonClicked()) );
 
-     addTextAction = new QAction(QIcon("/waytottpncode/tv14/images/text.png"), tr("Add Text"), this);
+     addTextAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/text.png"), tr("Add Text"), this);
      addTextAction->setStatusTip(tr("Add text label to the scene"));
      connect( addTextAction, SIGNAL(triggered()), this, SLOT(textbuttonClicked()) );
 
-     addConditionAction = new QAction(QIcon("/waytottpncode/tv14/images/condition.png"), tr("Add Condition To Item"), this);
+     addConditionAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/condition.png"), tr("Add Condition To Item"), this);
      addConditionAction->setStatusTip(tr("Add condition to the selected item"));
      connect( addConditionAction, SIGNAL(triggered()), this, SLOT(addCondition()) );
 
-     rotateAction = new QAction(QIcon("/waytottpncode/tv14/images/rotate.png"), tr("Rotate Item Clockwise"), this);
+     rotateAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/rotate.png"), tr("Rotate Item Clockwise"), this);
      rotateAction->setStatusTip(tr("Rotate the selected item clockwise"));
      connect( rotateAction, SIGNAL(triggered()), this, SLOT(rotateItem()) );
 
-     reverserotateAction = new QAction(QIcon("/waytottpncode/tv14/images/rotate2.png"), tr("Rotate Item Anti-clockwise"), this);
+     reverserotateAction = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/rotate2.png"), tr("Rotate Item Anti-clockwise"), this);
      reverserotateAction->setStatusTip(tr("Rotate the selected item anti-clockwise"));
      connect( reverserotateAction, SIGNAL(triggered()), this, SLOT(reverserotateItem()) );
 
-     mode1Action = new QAction(QIcon("/waytottpncode/tv14/images/pnt.png"), tr("Switch to Mode1"), this);
+     mode1Action = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/pnt.png"), tr("Switch to Mode1"), this);
      mode1Action->setStatusTip(tr("Switch the working mode to mode1"));
      connect( mode1Action, SIGNAL(triggered()), this, SLOT(ModeConfigure1()) );
 
-     mode2Action = new QAction(QIcon("/waytottpncode/tv14/images/data.png"), tr("Switch to Mode2"), this);
+     mode2Action = new QAction(QIcon("PATH_TO_TV14_FILE/tv14/images/data.png"), tr("Switch to Mode2"), this);
      mode2Action->setStatusTip(tr("Switch the working mode to mode2"));
      connect( mode2Action, SIGNAL(triggered()), this, SLOT(ModeConfigure2()) );
 
@@ -1931,43 +1933,43 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
      pointerButton = new QToolButton;
      pointerButton->setCheckable(true);
      pointerButton->setChecked(true);
-     pointerButton->setIcon(QIcon("/waytottpncode/tv14/images/pointer.png"));
+     pointerButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/pointer.png"));
      pointerButton->setToolTip("Select/Move Item");
      connect( pointerButton, SIGNAL(clicked()),this, SLOT(pointerbuttonClicked()) );
 
      clickButton = new QToolButton;
      clickButton->setCheckable(true);
-     clickButton->setIcon(QIcon("/waytottpncode/tv14/images/click2.png"));
+     clickButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/click2.png"));
      clickButton->setToolTip("Check Clicked Place/Transition");
      connect( clickButton, SIGNAL(clicked()), this, SLOT(clickbuttonClicked()) );
 
      arcInfoButton = new QToolButton;
      arcInfoButton->setCheckable(true);
-     arcInfoButton->setIcon(QIcon("/waytottpncode/tv14/images/click.png"));
+     arcInfoButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/click.png"));
      arcInfoButton->setToolTip("Check Clicked Arc");
      connect( arcInfoButton, SIGNAL(clicked()),this, SLOT(arcinfobuttonClicked()) );
 
      textButton = new QToolButton;
      textButton->setCheckable(true);
-     textButton->setIcon(QIcon("/waytottpncode/tv14/images/text.png"));
+     textButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/text.png"));
      textButton->setToolTip("Add Text Label");
      connect( textButton, SIGNAL(clicked()), this, SLOT(textbuttonClicked()) );
 
      multiselectButton = new QToolButton;
      multiselectButton->setCheckable(true);
-     multiselectButton->setIcon(QIcon("/waytottpncode/tv14/images/multiselect.png"));
+     multiselectButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/multiselect.png"));
      multiselectButton->setToolTip("Multiple Selection");
      connect( multiselectButton, SIGNAL(clicked()), this, SLOT(multiselectbuttonClicked()) );
 
      rotateButton = new QToolButton;
      rotateButton->setCheckable(true);
-     rotateButton->setIcon(QIcon("/waytottpncode/tv14/images/rotate.png"));
+     rotateButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/rotate.png"));
      rotateButton->setToolTip("Rotate Item Clockwise");
      connect( rotateButton, SIGNAL(clicked()), this, SLOT(rotatebuttonClicked()) );
 
      reverserotateButton = new QToolButton;
      reverserotateButton->setCheckable(true);
-     reverserotateButton->setIcon(QIcon("/waytottpncode/tv14/images/rotate2.png"));
+     reverserotateButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/rotate2.png"));
      reverserotateButton->setToolTip("Rotate Item Anticlockwise");
      connect( reverserotateButton, SIGNAL(clicked()), this, SLOT(reverserotatebuttonClicked()) );
 
@@ -1994,7 +1996,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
      fontColorToolButton->setPopupMode(QToolButton::MenuButtonPopup);
      fontColorToolButton->setMenu(createColorMenu(SLOT(textColorChanged()), Qt::black));
      textAction = fontColorToolButton->menu()->defaultAction();
-     fontColorToolButton->setIcon(createColorToolButtonIcon("/waytottpncode/tv14/images/textpointer.png", Qt::black));
+     fontColorToolButton->setIcon(createColorToolButtonIcon("PATH_TO_TV14_FILE/tv14/images/textpointer.png", Qt::black));
      fontColorToolButton->setAutoFillBackground(true);
      fontColorToolButton->setToolTip("Set Color to Text");
      connect(fontColorToolButton, SIGNAL(clicked()), this, SLOT(textButtonTriggered()));
@@ -2003,7 +2005,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
      fillColorToolButton->setPopupMode(QToolButton::MenuButtonPopup);
      fillColorToolButton->setMenu(createColorMenu(SLOT(itemColorChanged()), Qt::white));
      fillAction = fillColorToolButton->menu()->defaultAction();
-     fillColorToolButton->setIcon(createColorToolButtonIcon("/waytottpncode/tv14/images/floodfill.png", QColor(125,125,255,255)));
+     fillColorToolButton->setIcon(createColorToolButtonIcon("PATH_TO_TV14_FILE/tv14/images/floodfill.png", QColor(125,125,255,255)));
      fillColorToolButton->setToolTip("Set Color to Place/Transition");
      connect(fillColorToolButton, SIGNAL(clicked()), this, SLOT(fillButtonTriggered()));
 
@@ -2011,7 +2013,7 @@ QTableWidgetItem *item10 = new QTableWidgetItem(QString::number(100));
      lineColorToolButton->setPopupMode(QToolButton::MenuButtonPopup);
      lineColorToolButton->setMenu(createColorMenu(SLOT(lineColorChanged()), Qt::black));
      lineAction = lineColorToolButton->menu()->defaultAction();
-     lineColorToolButton->setIcon(createColorToolButtonIcon("/waytottpncode/tv14/images/linecolor.png", Qt::black));
+     lineColorToolButton->setIcon(createColorToolButtonIcon("PATH_TO_TV14_FILE/tv14/images/linecolor.png", Qt::black));
      lineColorToolButton->setToolTip("Set Color to Arc");
      connect(lineColorToolButton, SIGNAL(clicked()), this, SLOT(lineButtonTriggered()));
 
@@ -2064,35 +2066,35 @@ void MainWindow::createToolbars2()
 
      nextframebutton = new QPushButton;
 //     nextframebutton->setText("Next");
-     nextframebutton->setIcon(QIcon("/waytottpncode/tv14/images/nextframe.png"));
+     nextframebutton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/nextframe.png"));
      connect(this->nextframebutton, SIGNAL(clicked()), this, SLOT(showNext()));
 
      previousframebutton = new QPushButton; 
 //     previousframebutton->setText("Last");
-     previousframebutton->setIcon(QIcon("/waytottpncode/tv14/images/lastframe.png"));
+     previousframebutton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/lastframe.png"));
      connect(this->previousframebutton, SIGNAL(clicked()), this, SLOT(showLast()));
 
      fastforwardbutton = new QPushButton;
-     fastforwardbutton->setIcon(QIcon("/waytottpncode/tv14/images/fastforward.png"));
+     fastforwardbutton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/fastforward.png"));
      connect(this->fastforwardbutton, SIGNAL(clicked()), this, SLOT(Playforward()));
 
      fastbackwardbutton = new QPushButton;
-     fastbackwardbutton->setIcon(QIcon("/waytottpncode/tv14/images/fastbackward.png"));
+     fastbackwardbutton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/fastbackward.png"));
      connect(this->fastbackwardbutton, SIGNAL(clicked()), this, SLOT(Playbackward()));
 
      playbutton = new QPushButton;
-     playbutton->setIcon(QIcon("/waytottpncode/tv14/images/playandstop.png"));
+     playbutton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/playandstop.png"));
      connect(this->playbutton, SIGNAL(clicked()), this, SLOT(playandstop()));
 
      barchartButton = new QToolButton;
      barchartButton->setCheckable(true);
-     barchartButton->setIcon(QIcon("/waytottpncode/tv14/images/barchart.png"));
+     barchartButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/barchart.png"));
      barchartButton->setToolTip("Display Bar Chart In A Window");
      connect( barchartButton, SIGNAL(clicked()), this, SLOT(barchartbuttonClicked()) );
 
      filterButton = new QToolButton;
      filterButton->setCheckable(true);
-     filterButton->setIcon(QIcon("/waytottpncode/tv14/images/filter.png"));
+     filterButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/filter.png"));
      filterButton->setToolTip("Visualize Activity Actors of Current State");
      connect( filterButton, SIGNAL(clicked()), this, SLOT(filterbuttonClicked()) );
 
@@ -2100,7 +2102,7 @@ void MainWindow::createToolbars2()
 
      activitystateButton = new QToolButton;
      activitystateButton->setCheckable(true);
-     activitystateButton->setIcon(QIcon("/waytottpncode/tv14/images/states.png"));
+     activitystateButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/states.png"));
      activitystateButton->setToolTip("Visualize Current Activity State");
      connect( activitystateButton, SIGNAL(clicked()), this, SLOT(activitystatebuttonClicked()) );
 
@@ -2109,20 +2111,20 @@ void MainWindow::createToolbars2()
 
      backButton = new QToolButton;
      backButton->setCheckable(true);
-     backButton->setIcon(QIcon("/waytottpncode/tv14/images/goback.png"));
+     backButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/goback.png"));
      backButton->setToolTip("Go Back To Original Visualization");
      connect( backButton, SIGNAL(clicked()), this, SLOT(backbuttonClicked()) );     
 
      multiviewButton = new QToolButton;
      multiviewButton->setCheckable(true);
-     multiviewButton->setIcon(QIcon("/waytottpncode/tv14/images/grid.png"));
+     multiviewButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/grid.png"));
      multiviewButton->setToolTip("Show All Frames Of Current Event");
      connect( multiviewButton, SIGNAL(clicked()), this, SLOT(multiviewbuttonClicked()) );  
 
      pnButton = new QToolButton;
      pnButton->setCheckable(true);
      pnButton->setText("RunPN");
-     pnButton->setIcon(QIcon("/waytottpncode/tv14/images/pn.png"));
+     pnButton->setIcon(QIcon("PATH_TO_TV14_FILE/tv14/images/pn.png"));
      pnButton->setToolTip("Run Sedat's Peti Net code");
      connect( pnButton, SIGNAL(clicked()), this, SLOT(runPN()) );  
 
