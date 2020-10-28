@@ -110,11 +110,11 @@ After generating the build with g, then VTK is ready.
 
 ## Download tv14 and make changes on the code
 
-[tv14](#https://github.com/melikeaydogan/TTPN/tree/master/tv14)
+1. Download [tv14](https://github.com/melikeaydogan/TTPN/tree/master/tv14) from the master branch.
 
-1. In the mainwindow.cpp, to get images on the TTPN, change the places with "waytottpncode" with your direction to the file of TTPN code.
+2. In the mainwindow.cpp, to get images on the TTPN, change the places with "waytottpncode" with your direction to the file of TTPN code.
 
-2. In the CMakeLists.txt, change the VTK_DIR in line 6.
+3. In the CMakeLists.txt, change the VTK_DIR in line 6.
 
 ## How to open TTPN code with QtCreator
 
