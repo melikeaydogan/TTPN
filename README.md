@@ -112,7 +112,7 @@ After generating the build with g, then VTK is ready.
 
 1. Download [tv14](https://github.com/melikeaydogan/TTPN/tree/master/tv14) from the master branch.
 
-2. In the mainwindow.cpp, to get images on the TTPN, change the places with "waytottpncode" with your direction to the file of TTPN code.
+2. In the mainwindow.cpp, to get images on the TTPN, change the definition of PATH_TO_TV14_FILE with your path to the tv14 file in line 39.
 
 3. In the CMakeLists.txt, change the VTK_DIR in line 6.
 
